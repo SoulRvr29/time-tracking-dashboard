@@ -30,7 +30,7 @@ function App() {
             <ul className="flex flex-col max-lg:flex-row text-sl max-lg:text-lg gap-4 justify-between">
               <li
                 className={
-                  "hover:text-white" + (statsType === "daily" && " text-white")
+                  "hover:text-white " + (statsType === "daily" && " text-white")
                 }
               >
                 <button
@@ -43,7 +43,8 @@ function App() {
               </li>
               <li
                 className={
-                  "hover:text-white" + (statsType === "weekly" && " text-white")
+                  "hover:text-white " +
+                  (statsType === "weekly" && " text-white")
                 }
               >
                 <button
@@ -56,7 +57,7 @@ function App() {
               </li>
               <li
                 className={
-                  "hover:text-white" +
+                  "hover:text-white " +
                   (statsType === "monthly" && " text-white")
                 }
               >
@@ -94,25 +95,29 @@ function App() {
               src={`icon-${item.title.toLowerCase().replace(/\s/g, "-")}.svg`}
               alt="icon"
             />
-            <div className="relative h-full bg-Dark-blue rounded-2xl p-6 flex flex-col max-lg:gap-2 gap-3 mt-11 max-lg:mt-10 z-20 hover:bg-[--Desaturated-blue]">
+            <div className="relative h-full bg-Dark-blue rounded-2xl p-6 flex flex-col max-lg:gap-2 gap-3 mt-11 max-lg:mt-10 z-20 stats-container">
               <div className="flex justify-between items-center">
                 <h2 className="text-base max-lg:text-lg font-[500]">
                   {item.title}
                 </h2>
-                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
-                    fill="#BBC0FF"
-                    fillRule="evenodd"
-                  />
-                </svg>
+                <button className="ellipsis py-2">
+                  <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
+                  </svg>
+                </button>
               </div>
               <div className="flex gap-0 max-lg:gap-2 flex-col max-lg:flex-row max-lg:justify-between max-lg:items-center">
                 <p className="text-[3.5rem] max-lg:text-3xl text-white">
                   {item.timeframes[statsType].current}hrs
                 </p>
                 <p className="text-base max-lg:text-sm">
-                  Last Week - {item.timeframes[statsType].previous}hrs
+                  Last{" "}
+                  {statsType === "daily"
+                    ? "day"
+                    : statsType === "weekly"
+                    ? "weak"
+                    : "month"}{" "}
+                  - {item.timeframes[statsType].previous}hrs
                 </p>
               </div>
             </div>

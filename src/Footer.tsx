@@ -13,6 +13,7 @@ const Footer = () => {
       <a
         className="text-Desaturated-blue ml-1 hover:text-Light-red-(work) hover:underline"
         href="https://www.frontendmentor.io/profile/SoulRvr29"
+        target="_blank"
       >
         Paweł Chudecki
       </a>

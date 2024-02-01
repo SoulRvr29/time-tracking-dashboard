@@ -33,3 +33,14 @@ h3,
 h4 {
   color: white;
 }
+
+.stats-container:hover:not(:has(.ellipsis:hover)) {
+  background-color: var(--Desaturated-blue);
+}
+
+.ellipsis svg {
+  fill: #bbc0ff;
+}
+.ellipsis:hover svg {
+  fill: white;
+}
