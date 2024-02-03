@@ -101,7 +101,10 @@ function App() {
                 <h2 className="text-base max-lg:text-lg font-[500]">
                   {item.title}
                 </h2>
-                <button className="ellipsis py-2 hover:animate-pulse">
+                <button
+                  aria-label="ellipsis button"
+                  className="ellipsis py-2 hover:animate-pulse"
+                >
                   <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
                   </svg>
