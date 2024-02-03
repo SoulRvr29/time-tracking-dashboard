@@ -13,7 +13,7 @@ function App() {
         <section className="bg-Dark-blue rounded-2xl row-span-2 ">
           <header className="flex flex-wrap flex-col max-lg:flex-row max-lg:justify-center bg-Blue p-8 max-lg:gap-4 gap-10 rounded-2xl pb-20 max-lg:pb-8">
             <img
-              className="max-lg:w-16 w-[5.4rem] aspect-square border-[3px] rounded-full"
+              className="max-lg:w-16 w-[5.4rem] aspect-square border-[3px] rounded-full shadow-lg"
               src="image-jeremy.png"
               alt="Jeremy image"
             />
@@ -30,7 +30,8 @@ function App() {
             <ul className="flex flex-col max-lg:flex-row text-sl max-lg:text-lg gap-4 justify-between">
               <li
                 className={
-                  "hover:text-white " + (statsType === "daily" && " text-white")
+                  "hover:text-white hover:animate-pulse " +
+                  (statsType === "daily" && " text-white")
                 }
               >
                 <button
@@ -43,7 +44,7 @@ function App() {
               </li>
               <li
                 className={
-                  "hover:text-white " +
+                  "hover:text-white hover:animate-pulse " +
                   (statsType === "weekly" && " text-white")
                 }
               >
@@ -57,7 +58,7 @@ function App() {
               </li>
               <li
                 className={
-                  "hover:text-white " +
+                  "hover:text-white hover:animate-pulse " +
                   (statsType === "monthly" && " text-white")
                 }
               >
@@ -75,7 +76,7 @@ function App() {
         {data.map((item) => (
           <div
             className={
-              "rounded-2xl relative overflow-hidden z-0 cursor-pointer  " +
+              "rounded-2xl relative overflow-hidden z-0 " +
               (item.title == "Work"
                 ? "bg-Light-red-(work)"
                 : item.title == "Play"
@@ -95,12 +96,12 @@ function App() {
               src={`icon-${item.title.toLowerCase().replace(/\s/g, "-")}.svg`}
               alt="icon"
             />
-            <div className="relative h-full bg-Dark-blue rounded-2xl p-6 flex flex-col max-lg:gap-2 gap-3 mt-11 max-lg:mt-10 z-20 stats-container">
+            <div className="relative h-full bg-Dark-blue rounded-2xl p-6 flex flex-col max-lg:gap-2 gap-3 mt-11 max-lg:mt-10 z-20 cursor-pointer transition-colors stats-container shadow-[0_0_20px_0px_rgba(0,0,0,0.5)]">
               <div className="flex justify-between items-center">
                 <h2 className="text-base max-lg:text-lg font-[500]">
                   {item.title}
                 </h2>
-                <button className="ellipsis py-2">
+                <button className="ellipsis py-2 hover:animate-pulse">
                   <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
                   </svg>
