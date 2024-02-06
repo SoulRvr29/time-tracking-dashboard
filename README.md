@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/time-tracking-dashboard-DUZHWiaUZI](https://www.frontendmentor.io/solutions/time-tracking-dashboard-DUZHWiaUZI)
 - Live Site URL: [https://soulrvr29.github.io/time-tracking-dashboard/](https://soulrvr29.github.io/time-tracking-dashboard/)
 
 ### Built with
